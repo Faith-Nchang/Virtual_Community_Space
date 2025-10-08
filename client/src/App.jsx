@@ -3,6 +3,8 @@ import { useRoutes, Link } from 'react-router-dom'
 import Locations from './pages/Locations'
 import LocationEvents from './pages/LocationEvents'
 import Events from './pages/Events'
+import LocationDetailPage from './pages/LocationDetailPage';
+
 import './App.css'
 
 const App = () => {
@@ -30,7 +32,12 @@ const App = () => {
     {
       path: '/events',
       element: <Events />
+    }, {
+            path:"/locations/:id",
+            element:<LocationDetailPage />
+
     }
+
   ])
 
   return (
